@@ -8,7 +8,7 @@ import { UserProvider } from "@/components/context";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CRUD",
+  title: "Modifiable",
   description: "It is a CRUD based Nextjs application where we can perform all Create, Read, Update and Delete operations in Nextjs with MongoDB.",
   icons: {
     icon: ["/favicon.ico?v=4"],
