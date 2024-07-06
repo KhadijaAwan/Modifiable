@@ -76,7 +76,7 @@ const FormContent = () => {
                 </div>
 
                 <div className="mx-auto mt-6 md:mt-10">
-                    <button type="submit" className={`${buttonStyle} bg-slate-700 hover:bg-slate-800 mr-4`}>{isEditing ? "Update" : "Submit"} aria-label="post-button"</button>
+                    <button type="submit" className={`${buttonStyle} bg-slate-700 hover:bg-slate-800 mr-4`} aria-label="post-button">{isEditing ? "Update" : "Submit"}</button>
                     <button onClick={resetUser} className={`${buttonStyle} bg-blue-700 hover:bg-blue-600`} aria-label="reset-button">Reset</button>
                 </div>
             </form >
