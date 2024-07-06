@@ -35,8 +35,8 @@ const FormContent = () => {
             <h1 className={`${headingStyle}`}>Profile Details</h1>
             <form onSubmit={submitData} className="flex w-full flex-col">
                 <div className={`${spanStyle}`}>
-                    <label className={`${labelStyle} mx-4 md:ml-6 md:mr-7`}>Full Name</label>
-                    <input className={`${inputStyle}`} value={userDetails.fullname}
+                    <label className={`${labelStyle} mx-4 md:ml-6 md:mr-7`} htmlFor="fullname">Full Name</label>
+                    <input className={`${inputStyle}`} value={userDetails.fullname} id="fullname"
                         onChange={(e) =>
                             setUserDetails((prevState) => ({
                                 ...prevState,
@@ -45,8 +45,8 @@ const FormContent = () => {
                         } />
                 </div>
                 <div className={`${spanStyle}`}>
-                    <label className={`${labelStyle} ml-5 mr-6 md:mx-8`}>Address</label>
-                    <input className={`${inputStyle}`} value={userDetails.address}
+                    <label className={`${labelStyle} ml-5 mr-6 md:mx-8`} htmlFor="address">Address</label>
+                    <input className={`${inputStyle}`} value={userDetails.address} id="address"
                         onChange={(e) =>
                             setUserDetails((prevState) => ({
                                 ...prevState,
@@ -55,8 +55,8 @@ const FormContent = () => {
                         } />
                 </div >
                 <div className={`${spanStyle}`}>
-                    <label className={`${labelStyle} mx-4 md:ml-5 md:mr-7`}>Profession</label>
-                    <input className={`${inputStyle}`} value={userDetails.profession}
+                    <label className={`${labelStyle} mx-4 md:ml-5 md:mr-7`} htmlFor="profession">Profession</label>
+                    <input className={`${inputStyle}`} value={userDetails.profession} id="profession"
                         onChange={(e) =>
                             setUserDetails((prevState) => ({
                                 ...prevState,
@@ -65,8 +65,8 @@ const FormContent = () => {
                         } />
                 </div >
                 <div className={`${spanStyle}`}>
-                    <label className={`${labelStyle} mr-2 md:mr-4`}>Compensation</label>
-                    <input className={`${inputStyle}`} value={userDetails.compensation}
+                    <label className={`${labelStyle} mr-2 md:mr-4`} htmlFor="compensation">Compensation</label>
+                    <input className={`${inputStyle}`} value={userDetails.compensation} id="compensation"
                         onChange={(e) =>
                             setUserDetails((prevState) => ({
                                 ...prevState,
@@ -76,8 +76,8 @@ const FormContent = () => {
                 </div>
 
                 <div className="mx-auto mt-6 md:mt-10">
-                    <button type="submit" className={`${buttonStyle} bg-slate-700 hover:bg-slate-800 mr-4`}>{isEditing ? "Update" : "Submit"}</button>
-                    <button onClick={resetUser} className={`${buttonStyle} bg-blue-700 hover:bg-blue-600`}>Reset</button>
+                    <button type="submit" className={`${buttonStyle} bg-slate-700 hover:bg-slate-800 mr-4`}>{isEditing ? "Update" : "Submit"} aria-label="post-button"</button>
+                    <button onClick={resetUser} className={`${buttonStyle} bg-blue-700 hover:bg-blue-600`} aria-label="reset-button">Reset</button>
                 </div>
             </form >
         </div >
