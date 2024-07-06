@@ -42,10 +42,10 @@ const TableContent: NextPage<tableProps> = ({ totalUsers }) => {
                             <td className={`${tableDataStyle}`}>${user.compensation}</td>
                             <td className={`${tableDataStyle}`}>
                                 <div className={`${flexCenter} pl-2`}>
-                                    <button className={`${cardButtonStyle} bg-green-600 hover:bg-green-500`} onClick={() => editUser(user)}>
+                                    <button className={`${cardButtonStyle} bg-green-600 hover:bg-green-500`} onClick={() => editUser(user)} alt="edit-button">
                                         <EditIcon className="text-[14px]" />
                                     </button>
-                                    <button className={`${cardButtonStyle} bg-red-600 hover:bg-red-500`} onClick={() => deleteUser(user._id)}>
+                                    <button className={`${cardButtonStyle} bg-red-600 hover:bg-red-500`} onClick={() => deleteUser(user._id)} alt="delete-button">
                                         <DeleteIcon className="text-[14px]" />
                                     </button>
                                 </div>
@@ -59,7 +59,7 @@ const TableContent: NextPage<tableProps> = ({ totalUsers }) => {
                     {[...Array(maxPage).keys()].map(number => (
                         <button
                             key={number}
-                            onClick={() => setCurrentPage(number + 1)}
+                            onClick={() => setCurrentPage(number + 1)} alt="page-button"
                             className={`mx-2 px-3 py-[4px] rounded ${currentPage === number + 1 ? 'bg-blue-700 text-white' : 'bg-white text-blue-700'}`}
                         >
                             {number + 1}
